@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>    
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">원 따라다니기</h1>
+         <div class="circle" style="top:50%;left:50%;" onclick="circle.click();"><span>click!</span>
+         </div>
+    </div>
+    <script>
+        //원
+        var obj = document.querySelector(".circle");
+        const CLICKED = "clicked";
+        circle = {
+            //원을 클릭했을 때 circle 클래스에 clicked를 추가
+            click : function(){
+                obj.classList.toggle(CLICKED);
+            },
+            //원이 마우스 따라다니기
+            move : window.onmousemove = function(e){
+                // circle 클래스에 "clicked" 가 존재하면
+                if(obj.classList.contains(CLICKED)){
+                    obj.style.top = e.clientY + "px";
+                    obj.style.left = e.clientX + "px";
+                }
+            },
+        }
+    </script>
+</body>
+</html>
