@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Document</title>    
+    <title></title>  
 </head>
 <body>
     <div class="container">
         <h1 style="text-align: center;">원 따라다니기</h1>
-         <div class="circle" style="top:50%;left:50%;" onclick="circle.click();"><span>click!</span>
+         <div class="circle" style="top:50%;left:50%;" onclick="circle.click();"><span></span>
          </div>
     </div>
     <script>
         //원
         var obj = document.querySelector(".circle");
+        //클릭체크
         const CLICKED = "clicked";
+
+        //JSON객체
         circle = {
             //원을 클릭했을 때 circle 클래스에 clicked를 추가
             click : function(){
